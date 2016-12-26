@@ -46,6 +46,40 @@
             </tr>
         </c:forEach>
     </table>
+    <br>
+    <form method="post" action="meals">
+        <table>
+            <tr>Filter Date</tr>
+            <tr>
+                <td><label>Ot
+                    <input type="date" value="${timeDate1}" name="startDate">
+                </label></td>
+                <td><label>Do
+                    <input type="date" value="${timeDate2}" name="endDate">
+                </label></td>
+            </tr>
+            <tr>
+                <td><button type="submit">Find</button></td>
+            </tr>
+        </table>
+    </form>
+    <br>
+    <form method="post" action="meals">
+        <table>
+            <tr>Filter Time</tr>
+            <tr>
+                <td><label>Ot
+                    <input type="time" value="${timeFilter1}" name="startTime">
+                </label></td>
+                <td><label>Do
+                    <input type="time" value="${timeFilter2}" name="endTime">
+                </label></td>
+            </tr>
+            <tr>
+                <td><button type="submit">Find</button></td>
+            </tr>
+        </table>
+    </form>
 </section>
 </body>
 </html>

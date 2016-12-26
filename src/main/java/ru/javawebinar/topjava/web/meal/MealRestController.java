@@ -7,6 +7,7 @@ import org.springframework.stereotype.Controller;
 import ru.javawebinar.topjava.AuthorizedUser;
 import ru.javawebinar.topjava.model.Meal;
 import ru.javawebinar.topjava.service.MealService;
+import ru.javawebinar.topjava.to.MealWithExceed;
 
 import java.util.Collection;
 
@@ -33,7 +34,7 @@ public class MealRestController {
         return service.get(id, AuthorizedUser.id());
     }
 
-    public Collection<Meal> getAll() {
+    public Collection<MealWithExceed> getAll() {
         LOG.info("getAll " + AuthorizedUser.id());
         return service.getAll(AuthorizedUser.id());
     }
@@ -47,9 +48,4 @@ public class MealRestController {
         LOG.info("delete " + id);
         service.delete(id, AuthorizedUser.id());
     }
-
-
-
-
-
 }
